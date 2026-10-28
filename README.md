@@ -1,8 +1,8 @@
-# Aniqus — Enterprise Grounded Knowledge Engine (Project 2)
+# Aniqus — Enterprise Grounded Knowledge Engine
 
 An enterprise-grade, citation-grounded Retrieval-Augmented Generation (RAG) platform with **Hybrid Search (BM25 + Dense Vectors)**, **Cross-Encoder Re-ranking**, **Role-Based Access Control (RBAC/ACL)**, **Vector Semantic Caching**, and an **Automated Continuous Evaluation Harness**.
 
-Built in accordance with the industry specification from `11_Full-Stack_AI_Portfolio_Projects.pdf`.
+Built as a production-ready enterprise intelligence and knowledge retrieval system with strict anti-hallucination guardrails and sub-5ms semantic caching.
 
 ---
 
@@ -107,7 +107,8 @@ RAG/
 │   └── information_security_incident_response.md
 ├── eval_data/
 │   └── benchmark_dataset.json     # Ground-truth evaluation test cases
-└── 11_Full-Stack_AI_Portfolio_Projects.pdf
+├── .env.example                   # Environment configuration template
+└── .gitignore
 ```
 
 ---
