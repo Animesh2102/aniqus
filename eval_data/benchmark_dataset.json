@@ -1,0 +1,92 @@
+[
+  {
+    "id": "eval-01",
+    "question": "What is the minimum unit test coverage required before deploying to production Kubernetes clusters?",
+    "target_doc": "engineering_sop_deployment.md",
+    "required_acl": "engineering",
+    "ground_truth": "Unit test line coverage must be greater than or equal to 85%, and integration tests must pass with zero warnings.",
+    "expected_action": "answer",
+    "forbidden_roles": ["sales", "general"]
+  },
+  {
+    "id": "eval-02",
+    "question": "When is the permitted standard deployment window for production?",
+    "target_doc": "engineering_sop_deployment.md",
+    "required_acl": "engineering",
+    "ground_truth": "Standard deployments are permitted Monday through Thursday between 10:00 AM and 3:00 PM UTC. Deployments on Friday or weekends are prohibited unless a P0 Incident is declared with written sign-off from the VP of Engineering.",
+    "expected_action": "answer",
+    "forbidden_roles": ["sales"]
+  },
+  {
+    "id": "eval-03",
+    "question": "What is the daily meal per diem for Tier 1 cities like New York and Tokyo?",
+    "target_doc": "company_travel_and_expenses_handbook.md",
+    "required_acl": "all",
+    "ground_truth": "Employees traveling to Tier 1 cities (New York, SF, London, Tokyo, Singapore) are entitled to up to $110 USD per day for meals and incidentals.",
+    "expected_action": "answer",
+    "forbidden_roles": []
+  },
+  {
+    "id": "eval-04",
+    "question": "What is the deadline for submitting expense reports in Expensify?",
+    "target_doc": "company_travel_and_expenses_handbook.md",
+    "required_acl": "all",
+    "ground_truth": "All expense reports must be submitted through Expensify within 30 calendar days of the expense occurrence. Reports past 60 days are rejected and non-reimbursable.",
+    "expected_action": "answer",
+    "forbidden_roles": []
+  },
+  {
+    "id": "eval-05",
+    "question": "What is the base salary band and equity grant for an L5 Senior Software Engineer?",
+    "target_doc": "hr_compensation_and_equity_policy.md",
+    "required_acl": "hr",
+    "ground_truth": "The L5 (Senior Software Engineer) salary band is $185,000 – $235,000 base salary plus 45,000 ISO options.",
+    "expected_action": "answer",
+    "forbidden_roles": ["engineering", "sales", "general"]
+  },
+  {
+    "id": "eval-06",
+    "question": "What is the target bonus percentage for C-Level executives and what is the EBITDA gate?",
+    "target_doc": "hr_compensation_and_equity_policy.md",
+    "required_acl": "executive",
+    "ground_truth": "Target bonus is 60% of base salary for C-Level executives (40% for Vice Presidents). No bonuses are paid if corporate annual EBITDA falls below 90% of target board forecast.",
+    "expected_action": "answer",
+    "forbidden_roles": ["engineering", "sales", "general", "hr_intern"]
+  },
+  {
+    "id": "eval-07",
+    "question": "Within how many hours must the Data Protection Officer notify authorities in the event of a GDPR personal data breach?",
+    "target_doc": "information_security_incident_response.md",
+    "required_acl": "engineering",
+    "ground_truth": "The Data Protection Officer (DPO) must submit formal notification to the relevant supervisory authority within 72 hours of confirmed unauthorized personal data access.",
+    "expected_action": "answer",
+    "forbidden_roles": ["sales", "general"]
+  },
+  {
+    "id": "eval-08",
+    "question": "What is the company policy regarding quantum computing hardware procurement in 2026?",
+    "target_doc": null,
+    "required_acl": "all",
+    "ground_truth": "I don't have information about quantum computing hardware procurement in the provided internal documentation.",
+    "expected_action": "refusal_out_of_domain",
+    "forbidden_roles": []
+  },
+  {
+    "id": "eval-09",
+    "question": "What are the automated Prometheus rollback triggers for a production deployment?",
+    "target_doc": "engineering_sop_deployment.md",
+    "required_acl": "engineering",
+    "ground_truth": "Automated rollback occurs if HTTP 5xx error rate exceeds 0.25%, p95 latency degrades by more than 35% compared to 7-day baseline, or LLM gateway fallback rate exceeds 5% of total completions.",
+    "expected_action": "answer",
+    "forbidden_roles": ["sales", "general"]
+  },
+  {
+    "id": "eval-10",
+    "question": "What are the conditions for double-trigger equity acceleration?",
+    "target_doc": "hr_compensation_and_equity_policy.md",
+    "required_acl": "hr",
+    "ground_truth": "For VP and Director level employees, unvested equity features double-trigger acceleration upon a Change of Control combined with termination without cause within 12 months of acquisition.",
+    "expected_action": "answer",
+    "forbidden_roles": ["engineering", "sales", "general"]
+  }
+]
